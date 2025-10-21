@@ -43,89 +43,45 @@
       </div>
     </section>
 
-    <section class="featured">
-      <div class="container">
-        <h3 class="section-title">Featured Collection</h3>
-        <div class="grid">
-
-  <section class="gallery">
-    <div class="product">
-      <img src="1.jpg" alt="Painted Trilobite Claw">
-      <h3>Painted Trilobite Claw</h3>
-      <p>$120</p>
+ <!-- Product Gallery -->
+  <section id="shop" class="gallery container">
+    <div class="product" data-id="1" data-name="Tyrannosaurus Skull Replica" data-price="85">
+      <img src="assets/trex.jpg" alt="T-Rex Skull Replica" />
+      <h3>Tyrannosaurus Skull Replica</h3>
+      <p>$85</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="2.jpg" alt="Painted Allosaurus Skull">
-      <h3>Painted Allosaurus Skull</h3>
-      <p>$200</p>
+    <div class="product" data-id="2" data-name="Ammonite Fossil Model" data-price="40">
+      <img src="assets/ammonite.jpg" alt="Ammonite Fossil" />
+      <h3>Ammonite Fossil Model</h3>
+      <p>$40</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="3.jpg" alt="Painted Allosaurus Claw">
-      <h3>Painted Allosaurus Claw</h3>
-      <p>$350</p>
+    <div class="product" data-id="3" data-name="Trilobite Replica" data-price="25">
+      <img src="assets/trilobite.jpg" alt="Trilobite Replica" />
+      <h3>Trilobite Replica</h3>
+      <p>$25</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
 
-    <div class="product">
-      <img src="fossil4.jpg" alt="Painted Fossil Leaf">
-      <h3>Painted Fossil Leaf</h3>
-      <p>$180</p>
+    <div class="product" data-id="4" data-name="Dinosaur Claw Model" data-price="35">
+      <img src="assets/claw.jpg" alt="Dinosaur Claw Model" />
+      <h3>Dinosaur Claw Model</h3>
+      <p>$35</p>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
+  </section>
 
-    <div class="product">
-      <img src="fossil1.jpg" alt="Painted Trilobite">
-      <h3>Painted Trilobite</h3>
-      <p>$120</p>
-    </div>
+  <!-- Cart Section -->
+  <section id="cart" class="cart-section container">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p class="cart-total">Total: $<span id="cart-total">0</span></p>
+    <div id="paypal-button-container"></div>
+  </section>
 
-    <div class="product">
-      <img src="fossil2.jpg" alt="Painted Ammonite">
-      <h3>Painted Ammonite</h3>
-      <p>$200</p>
-    </div>
-
-    <div class="product">
-      <img src="fossil3.jpg" alt="Painted Dinosaur">
-      <h3>Painted Dinosaur</h3>
-      <p>$350</p>
-    </div>
-
-    <div class="product">
-      <img src="fossil4.jpg" alt="Painted Fossil Leaf">
-      <h3>Painted Fossil Leaf</h3>
-      <p>$180</p>
-    </div>
-
-    <div class="product">
-      <img src="fossil1.jpg" alt="Painted Trilobite">
-      <h3>Painted Trilobite</h3>
-      <p>$120</p>
-    </div>
-
-    <div class="product">
-      <img src="fossil2.jpg" alt="Painted Ammonite">
-      <h3>Painted Ammonite</h3>
-      <p>$200</p>
-    </div>
-
-    <div class="product">
-      <img src="fossil3.jpg" alt="Painted Dinosaur">
-      <h3>Painted Dinosaur</h3>
-      <p>$350</p>
-    </div>
-
-    <div class="product">
-      <img src="fossil4.jpg" alt="Painted Fossil Leaf">
-      <h3>Painted Fossil Leaf</h3>
-      <p>$180</p>
-    </div>
-    <section id="cart">
-  <h2>Your Cart</h2>
-  <ul id="cart-items"></ul>
-  <p>Total: $<span id="cart-total">0.00</span></p>
-  <div id="paypal-button-container"></div>
-</section>
           <article class="card reveal">
             <img src="assets/trilobite.jpg" alt="Painted trilobite fossil" />
             <h4>Painted Trilobite</h4>
