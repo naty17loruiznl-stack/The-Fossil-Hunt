@@ -28,26 +28,25 @@ body{
 .skip-link{position:absolute;left:-9999px;top:auto}
 .skip-link:focus{left:24px;top:12px;background:var(--gold);color:#111;padding:8px 12px;border-radius:4px;z-index:10000}
 
+/* Cart */
 .cart-icon {
-  position: relative;
-  text-decoration: none;
-  color: var(--cream);
-  font-size: 22px;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
 }
 
-#cart-count {
+.cart-icon span {
+  background: #f4b400; /* color dorado fósil */
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 0.8em;
   position: absolute;
   top: -8px;
-  right: -12px;
-  background: var(--gold);
-  color: var(--deep-charcoal);
-  font-size: 13px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 6px;
-  min-width: 20px;
-  text-align: center;
+  right: -10px;
 }
+
 /* Top banner */
 .top-banner{
   background:linear-gradient(180deg,var(--parchment),#e1d4c0);
