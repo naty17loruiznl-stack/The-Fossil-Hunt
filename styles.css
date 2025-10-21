@@ -110,6 +110,19 @@ body{
   outline-color:var(--bronze)
 }
 
+/* Buttons */
+button{
+  background:var(--gold);
+  color:var(--deep-charcoal);
+  border:none;
+  padding:10px 16px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:background .25s;
+  font-weight:600;
+}
+button:hover{background:var(--amber);}
+
 /* Product Gallery */
 .gallery{
   display:grid;
