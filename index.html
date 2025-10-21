@@ -121,6 +121,12 @@
       <h3>Painted Fossil Leaf</h3>
       <p>$180</p>
     </div>
+    <section id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: $<span id="cart-total">0.00</span></p>
+  <div id="paypal-button-container"></div>
+</section>
           <article class="card reveal">
             <img src="assets/trilobite.jpg" alt="Painted trilobite fossil" />
             <h4>Painted Trilobite</h4>
@@ -215,5 +221,46 @@
   <a class="skip-link" href="#content">Skip to content</a>
 
   <script src="scripts.js"></script>
+  <script>
+let cart = [];
+const cartList = document.getElementById("cart-items");
+const totalDisplay = document.getElementById("cart-total");
+
+function addToCart(name, price) {
+  const item = { name, price };
+  cart.push(item);
+  updateCart();
+}
+
+function updateCart() {
+  cartList.innerHTML = "";
+  let total = 0;
+  cart.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${item.name} - $${item.price}`;
+    cartList.appendChild(li);
+    total += item.price;
+  });
+  totalDisplay.textContent = total.toFixed(2);
+  <script src="https://www.paypal.com/sdk/js?client-id=AZlX1IH-u6gZ-L2rqr394UJO7i41Tx62sDnudMTobzKyVJjNcJRBB8CWnq-WIY0A0AceUAuAf6gvUz9u&currency=USD"></script>
+<script>
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    const total = parseFloat(document.getElementById('cart-total').innerText);
+    return actions.order.create({
+      purchase_units: [{
+        amount: { value: total.toFixed(2) }
+      }]
+    });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      alert('Payment completed by ' + details.payer.name.given_name + '!');
+      cart = [];
+      updateCart();
+    });
+  }
+}).render('#paypal-button-container');
+</script>
 </body>
 </html>
