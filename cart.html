@@ -42,9 +42,39 @@
     </aside>
   </main>
 
-  <footer class="cart-footer">
-    <p>© 2025 The Fossil Hunt. Crafted with care and fossils 🦖</p>
+   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Store Policy</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Payment</h4>
+        <div class="payments">
+          <img src="assets/paypal.svg" alt="PayPal" />
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@thefossilhunt.com">hello@thefossilhunt.com</a></li>
+          <li><a href="tel:+1-555-555-1234">+1 (555) 555‑1234</a></li>
+          <li class="socials">
+            <a aria-label="Facebook" href="#"><img src="assets/facebook.svg" alt="" /></a>
+            <a aria-label="Instagram" href="#"><img src="assets/instagram.svg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© 2025 The Fossil Hunt — All Rights Reserved</div>
   </footer>
+
+  <a class="skip-link" href="#content">Skip to content</a>
 
   <!-- PayPal script -->
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
@@ -73,4 +103,5 @@
     }).render('#paypal-button-container');
   </script>
 </body>
+
 </html>
