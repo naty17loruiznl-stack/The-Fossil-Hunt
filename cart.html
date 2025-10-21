@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart | The Fossil Hunt</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <header class="cart-header">
+    <h1>Your Cart</h1>
+    <a href="index.html" class="back-link">← Continue Shopping</a>
+  </header>
+
+  <main class="cart-container">
+    <section class="cart-items">
+      <div class="cart-item">
+        <img src="img/spinosaurus.jpg" alt="Spinosaurus figurine" />
+        <div class="item-info">
+          <h3>Spinosaurus aegyptiacus</h3>
+          <p>Scale 1:72 | Unpainted</p>
+          <div class="quantity">
+            <label for="qty">Qty:</label>
+            <input id="qty" type="number" value="1" min="1">
+          </div>
+        </div>
+        <div class="item-price">€46,64</div>
+      </div>
+    </section>
+
+    <aside class="cart-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-line">
+        <span>Subtotal</span>
+        <span>€46,64</span>
+      </div>
+      <div class="summary-line small">
+        <span>Shipping calculated at checkout</span>
+      </div>
+
+      <div id="paypal-button-container"></div>
+    </aside>
+  </main>
+
+  <footer class="cart-footer">
+    <p>© 2025 The Fossil Hunt. Crafted with care and fossils 🦖</p>
+  </footer>
+
+  <!-- PayPal script -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
+  <script>
+    paypal.Buttons({
+      style: {
+        color: 'gold',
+        shape: 'pill',
+        label: 'paypal',
+        height: 40
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '46.64'
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Payment completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>
