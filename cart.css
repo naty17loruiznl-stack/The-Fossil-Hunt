@@ -100,9 +100,22 @@ body {
   color: #7b6d5e;
 }
 
-.cart-footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: #6b4f3b;
-  font-size: 0.9rem;
+/* Footer */
+.site-footer{
+  background:var(--warm-umber);padding:40px 0 16px;border-top:1px solid rgba(201,163,106,.25)
 }
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.site-footer h4{
+  font-family:'Cinzel',serif;color:var(--gold);margin-top:0
+}
+.footer-links{list-style:none;margin:0;padding:0}
+.footer-links li{margin-bottom:8px}
+.footer-links a{color:var(--cream);text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+.payments img{height:26px;margin-right:10px;filter:grayscale(30%) brightness(1.1)}
+.socials a img{height:22px;margin-right:8px}
+.copyright{margin-top:24px;text-align:center;color:var(--sandstone);font-size:14px}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
